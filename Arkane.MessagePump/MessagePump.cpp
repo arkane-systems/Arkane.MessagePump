@@ -23,7 +23,7 @@ namespace ArkaneSystems
 				return MessageReceived(WindowMessage(hWnd, message, wParam, lParam));
 			}
 
-			hash_map<HWND, NativeMessageOnlyWindow *> NativeMessageOnlyWindow::s_windowsMap;
+			unordered_map<HWND, NativeMessageOnlyWindow *> NativeMessageOnlyWindow::s_windowsMap;
 
 			void NativeMessageOnlyWindow::Create()
 			{

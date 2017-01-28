@@ -1,10 +1,8 @@
 // MessagePump.h
 
-#define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
-
 #pragma once
 #include <Windows.h>
-#include <hash_map>
+#include <unordered_map>
 #include <vcclr.h>
 
 using namespace System;
@@ -32,7 +30,7 @@ namespace ArkaneSystems
 
 				// This map helps in correlating the hWnd we get in the WndProc to the
 				// NativeMessageOnlyWindow instance of that window.
-				static hash_map<HWND, NativeMessageOnlyWindow *> s_windowsMap;
+				static unordered_map<HWND, NativeMessageOnlyWindow *> s_windowsMap;
 
 				// Enables calling back to .NET interface method.
 				gcroot<IMessageCallback ^> _messageCallback;
