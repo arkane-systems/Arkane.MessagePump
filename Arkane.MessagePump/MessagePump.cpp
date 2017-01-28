@@ -28,7 +28,7 @@ namespace ArkaneSystems
 			void NativeMessageOnlyWindow::Create()
 			{
 				// Create a window that can only receive messages.
-				m_hWnd = CreateWindow(L"MessageOnly", L"", 0, 0, 0, 0, 0, HWND_MESSAGE, nullptr, GetModuleHandle(0), nullptr);
+				m_hWnd = CreateWindow(L"Message", L"", 0, 0, 0, 0, 0, HWND_MESSAGE, nullptr, GetModuleHandle(0), nullptr);
 
 				if (m_hWnd == nullptr)
 					Marshal::ThrowExceptionForHR(GetLastError());
