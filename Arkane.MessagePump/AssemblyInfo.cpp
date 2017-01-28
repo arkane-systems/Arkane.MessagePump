@@ -11,14 +11,16 @@ using namespace System::Security::Permissions;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly:AssemblyTitleAttribute(L"ArkaneMessagePump")];
-[assembly:AssemblyDescriptionAttribute(L"")];
-[assembly:AssemblyConfigurationAttribute(L"")];
-[assembly:AssemblyCompanyAttribute(L"")];
-[assembly:AssemblyProductAttribute(L"ArkaneMessagePump")];
-[assembly:AssemblyCopyrightAttribute(L"Copyright (c)  2017")];
-[assembly:AssemblyTrademarkAttribute(L"")];
-[assembly:AssemblyCultureAttribute(L"")];
+[assembly:AssemblyTitleAttribute(L"Arkane.MessagePump")];
+[assembly:AssemblyDescriptionAttribute(L"A message-only window interface for .NET.")];
+
+#if DEBUG
+[assembly:AssemblyConfigurationAttribute(L"Debug")];
+#else
+[assembly:AssemblyConfigurationAttribute(L"Release")];
+#endif
+
+[assembly:AssemblyCopyrightAttribute(L"All code within published by Alon Fliess here - http://blogs.microsoft.co.il/alon/2011/12/26/message-only-window-in-for-net-application/ - and free to use. No copyright is implied or imputed.")];
 
 //
 // Version information for an assembly consists of the following four values:
@@ -31,7 +33,7 @@ using namespace System::Security::Permissions;
 // You can specify all the value or you can default the Revision and Build Numbers
 // by using the '*' as shown below:
 
-[assembly:AssemblyVersionAttribute("1.0.*")];
+[assembly:AssemblyVersionAttribute("1.0.0.0")];
 
 [assembly:ComVisible(false)];
 
